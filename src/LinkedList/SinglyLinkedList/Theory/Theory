@@ -1,0 +1,172 @@
+/**
+ * Linked List : Introduction
+ *
+ * Imagine you are given a task where you have to maintain a data entry of cars entering a parking lot.
+ * Since the number of cars entering will be different and may change daily, constructing a fixed-sized
+ * data structure like an array might not be helpful.
+ *
+ * This is when linked lists come into the picture, which allows us to add and remove cars easily.
+ * Unlike arrays, linked lists have a variable size and can be modified to our needs.
+ */
+
+// -------------------------------------------------------------------------------------------------------------------------
+// What is a Linked List?
+
+/**
+ * A Linked List is a linear data structure that can be visualized as a chain of nodes,
+ * where each node stores some data and a reference (or pointer) to the next node in the list.
+ * Unlike arrays, elements in a linked list are not stored at contiguous memory locations.
+ *
+ * Arrays require elements to be stored at continuous memory locations, and resizing them is costly.
+ * For arrays, to add an element, the next memory slot must be available — which may not always be the case.
+ * Linked lists overcome this by allocating memory dynamically, allowing insertion and deletion with ease.
+ *
+       Image: src\LinkedList\SinglyLinkedList\Theory\img 1.png
+
+ * Each node of a linked list contains:
+ *   - Data (actual value to store)
+ *   - Pointer (reference to the next node)
+ *
+ * The first node is referred to as the 'head', and the last node (whose next is null) is the 'tail'.
+ */
+
+       Image: src/LinkedList/SinglyLinkedList/Theory/img 2.png
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Creating a Linked List in Java:
+
+/**
+ * To create a linked list, we define a class 'Node' with two variables:
+ *   - int data
+ *   - Node next
+ *
+ * These variables allow a node to store an integer value and point to the next node in the sequence.
+ */
+
+class Node {
+    int data;       // The actual data stored in the node
+    Node next;      // Reference to the next node in the list
+
+    // Constructor to initialize node with data and next reference
+    Node(int data1, Node next1) {
+        this.data = data1;
+        this.next = next1;
+    }
+
+    // Constructor to initialize node with data only; next is null
+    Node(int data1) {
+        this.data = data1;
+        this.next = null;
+    }
+}
+
+public class LinkedList {
+    public static void main(String[] args) {
+        int[] arr = {2, 5, 8, 7};
+
+        // Create a new node with value from array
+        Node y = new Node(arr[0]);
+
+        // Print the data stored in the node
+        System.out.println("Data in first node: " + y.data); // Output: 2
+
+        // Create a reference to the same node
+        Node z = y;
+
+        // Print the reference (memory address-style representation)
+        System.out.println("Reference to node: " + z);
+    }
+}
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Understanding Pointers / References in Java:
+
+/**
+ * Java does not allow direct memory manipulation or pointer arithmetic like C/C++.
+ * Instead, Java uses reference variables to refer to objects.
+ * A reference is an address or link to where the object is stored in memory.
+ *
+ *
+ *Image:  src/LinkedList/SinglyLinkedList/Theory/img 3.png
+ *
+ *
+ * For example:
+ *    Node x = new Node(10);
+ *    Node y = x;
+ * Now, both x and y point to the same Node object in memory.
+ * Any changes via x or y will reflect on the same node.
+ */
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Memory Comparison:
+
+/**
+ * Let's assume we are storing integer values.
+ *
+ * In an array:
+ *     - Each int consumes 4 bytes
+ *     - Total = 4 * number of elements
+ *
+ * In a linked list:
+ *     - Each node stores an int and a reference (pointer)
+ *     - Size depends on system architecture:
+ *
+ *       On 32-bit systems:
+ *         int = 4 Bytes
+ *         reference = 4 Bytes
+ *         Total per node = 8 Bytes
+ *
+ *       On 64-bit systems:
+ *         int = 4 Bytes
+ *         reference = 8 Bytes
+ *         Total per node = 12 Bytes
+ *
+ * Thus, linked lists require more memory than arrays, but offer flexibility.
+ */
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Applications of Linked Lists:
+
+/**
+ * 1. Building dynamic data structures (like stacks, queues, graphs, hash tables)
+ * 2. Efficient insertion and deletion (especially at the beginning or middle)
+ * 3. Dynamic memory allocation
+ * 4. Implementation of adjacency list in graphs
+ * 5. Browser history (back and forward navigation)
+ * 6. Undo functionality in editors
+ */
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Types of Linked Lists:
+
+/**
+ * 1. Singly Linked List:
+ *    - Each node points to the next node
+ *    - Traversal: Forward only
+ *    - Memory efficient but one-directional
+ *
+ * 2. Doubly Linked List:
+ *    - Each node points to both next and previous nodes
+ *    - Traversal: Forward and backward
+ *    - Slightly more memory usage
+ *
+ * 3. Circular Linked List:
+ *    - Last node points back to the head
+ *    - Forms a circular loop
+ *    - Can be singly or doubly circular
+ */
+
+// -------------------------------------------------------------------------------------------------------------------------
+// Summary:
+
+/**
+ * Arrays are fixed-size and memory-contiguous, efficient for indexing but costly to resize.
+ * Linked lists are dynamic-size and scattered in memory, efficient for insert/delete.
+ * In Java, reference variables handle object linking, simulating pointer behavior.
+ *
+ * While linked lists consume more memory, they offer greater flexibility and are essential
+ * in many real-time and dynamic applications.
+ */
+
+
+
