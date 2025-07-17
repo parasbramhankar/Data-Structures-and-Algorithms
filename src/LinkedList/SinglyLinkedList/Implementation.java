@@ -13,8 +13,6 @@ class Node{
     }
 }
 
-
-
 public class Implementation {
     static Node head;
     static Node addDataInTheLinkedList(int []data){
