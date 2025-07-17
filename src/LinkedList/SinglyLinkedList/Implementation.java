@@ -32,7 +32,7 @@ public class Implementation {
         }
 
         for(int i=1;i<data.length;i++){
-            temp.data=data[i];
+            temp.next=new Node(data[i]);
             temp=temp.next;
         }
 
@@ -47,19 +47,21 @@ public class Implementation {
 
         int []arr=new int[n];
 
+        System.out.println("Enter array elements: ");
+
         for(int i=0;i<n;i++){
             arr[i]= scanner.nextInt();
         }
 
         Node head=addDataInTheLinkedList(arr);
-
+        System.out.println("The linked list: ");
         displayList(head);
     }
     static void displayList(Node head){
         Node temp=head;
-
         while(temp.next!=null){
-            System.out.println(temp.data+" ");
+            System.out.println(temp.data+" "+temp.next);
+            temp=temp.next;
         }
     }
 }
