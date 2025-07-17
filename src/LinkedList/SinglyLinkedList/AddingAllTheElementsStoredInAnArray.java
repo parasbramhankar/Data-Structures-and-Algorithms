@@ -2,17 +2,7 @@ package LinkedList.SinglyLinkedList;
 
 import java.util.Scanner;
 
-class Node {
-    int data;
-    Node next;
-
-    Node(int data){
-        this.data = data;
-        this.next = null;
-    }
-}
-
-public class Implementation {
+public class AddingAllTheElementsStoredInAnArray{
     static Node head;
 
     static Node addDataInTheLinkedList(int[] data){
@@ -34,7 +24,7 @@ public class Implementation {
     static void displayList(Node head){
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.data + " ");
+            System.out.println(temp.data + " "+ temp.next);
             temp = temp.next;
         }
         System.out.println(); // Clean line after printing all elements
