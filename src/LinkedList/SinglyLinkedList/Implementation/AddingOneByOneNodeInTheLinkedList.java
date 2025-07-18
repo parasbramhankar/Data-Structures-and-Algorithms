@@ -1,4 +1,4 @@
-package LinkedList.SinglyLinkedList;
+package LinkedList.SinglyLinkedList.Implementation;
 
 class LinkedList{
     Node head;
