@@ -68,7 +68,6 @@ public class LinkedList {
         System.out.println("After insertion at end: ");
         display(head);
 
-
     }
 
 }
