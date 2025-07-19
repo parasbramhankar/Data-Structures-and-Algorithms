@@ -7,6 +7,7 @@ public class FromEnd {
 
         if(head==null){
             System.out.println("List is empty");
+            return;
         }
 
         Node temp=head;
