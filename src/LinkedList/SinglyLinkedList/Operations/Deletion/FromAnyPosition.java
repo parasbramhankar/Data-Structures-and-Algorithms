@@ -11,14 +11,18 @@ public class FromAnyPosition {
              return;
          }
 
-
+         Node temp=head;
 
          for(int i=0;i<pos-1;i++){
 
-             if()
+             if(temp.next==null){
+                 System.out.println("List does not have "+pos+"nodes");
+                 return;
+             }
+             temp=temp.next;
          }
 
-
+         temp=temp.next.next;
     }
 
 
