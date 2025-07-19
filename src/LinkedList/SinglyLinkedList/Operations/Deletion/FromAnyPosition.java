@@ -12,6 +12,13 @@ public class FromAnyPosition {
          }
 
 
+
+         for(int i=0;i<pos-1;i++){
+
+             if()
+         }
+
+
     }
 
 
