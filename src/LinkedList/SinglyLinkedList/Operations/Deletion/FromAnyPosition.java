@@ -21,7 +21,6 @@ public class FromAnyPosition {
              }
              temp=temp.next;
          }
-
          temp=temp.next.next;
     }
 
