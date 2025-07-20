@@ -3,7 +3,6 @@ package LinkedList.SinglyLinkedList.Operations.Deletion;
 import java.util.Scanner;
 
 public class FromAnyPosition {
-
     static void removeFromAnyPosition(Node head,int pos){
          if(head==null){
              System.out.println("List is Empty");
@@ -22,7 +21,6 @@ public class FromAnyPosition {
         }
          temp.next=temp.next.next;
     }
-
 
     static void display(Node head){
 
@@ -57,6 +55,5 @@ public class FromAnyPosition {
         display(head);
 
     }
-
-
+    
 }
