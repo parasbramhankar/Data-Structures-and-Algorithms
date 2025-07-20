@@ -55,5 +55,5 @@ public class FromAnyPosition {
         display(head);
 
     }
-    
+
 }
