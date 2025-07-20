@@ -20,7 +20,6 @@ public class RecursiveSolution {
         }
 
         return idx+1;
-
     }
     static void display(Node head){
         Node temp=head;
