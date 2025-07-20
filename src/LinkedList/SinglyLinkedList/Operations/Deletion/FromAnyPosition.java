@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class FromAnyPosition {
 
-
     static void removeFromAnyPosition(Node head,int pos){
          if(head==null){
              System.out.println("List is Empty");
@@ -13,15 +12,15 @@ public class FromAnyPosition {
 
          Node temp=head;
 
-         for(int i=0;i<pos-1;i++){
-
-             if(temp.next==null){
-                 System.out.println("List does not have "+pos+"nodes");
-                 return;
-             }
+         for(int i=0; temp!=null && i<pos-1;i++){
              temp=temp.next;
          }
-         temp=temp.next.next;
+
+        if(temp==null ||temp.next==null){
+            System.out.println("Position out of bound");
+            return;
+        }
+         temp.next=temp.next.next;
     }
 
 
