@@ -21,6 +21,7 @@ public class RecursiveSolution {
 
         return idx+1;
     }
+
     static void display(Node head){
         Node temp=head;
 
@@ -30,6 +31,7 @@ public class RecursiveSolution {
         }
         System.out.println("null");
     }
+
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
 
