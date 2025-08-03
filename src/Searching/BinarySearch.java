@@ -41,6 +41,7 @@ public class BinarySearch {
 
         System.out.println("Index: "+ind);
         System.out.println("Position: "+(ind+1));
+
     }
 }
 
