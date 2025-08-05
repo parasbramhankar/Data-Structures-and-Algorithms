@@ -1,4 +1,4 @@
-package LinkedList.DoublyLinkedList.Operations;
+package LinkedList.DoublyLinkedList.Operations.Insertion;
 
 public class Node {
 
