@@ -1,8 +1,8 @@
-package LinkedList.DoublyLinkedList.Operations;
+package LinkedList.DoublyLinkedList.Operations.Insertion;
 
 public class InsertAtEnd {
 
-    static Node InsertAtEndFun(Node head,int data){
+    static Node InsertAtEndFun(Node head, int data){
         Node newNode=new Node(data);
         if(head==null){
             head=newNode;
