@@ -1,8 +1,8 @@
-package LinkedList.DoublyLinkedList.Operations;
+package LinkedList.DoublyLinkedList.Operations.Insertion;
 
 public class InsertAtAnyPosition {
 
-    static Node InsertAtAnyPositionFun(Node head,int data,int pos){
+    static Node InsertAtAnyPositionFun(Node head, int data, int pos){
         Node newNode=new Node(data);
         if(head==null){
             head=newNode;
