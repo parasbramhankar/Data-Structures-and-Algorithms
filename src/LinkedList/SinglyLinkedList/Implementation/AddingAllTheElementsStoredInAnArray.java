@@ -21,6 +21,7 @@ public class AddingAllTheElementsStoredInAnArray{
         return head;
     }
 
+
     static void displayList(Node head){
         Node temp = head;
         while (temp != null) {
