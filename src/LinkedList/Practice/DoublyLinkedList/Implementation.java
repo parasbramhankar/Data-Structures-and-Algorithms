@@ -15,17 +15,19 @@ class Node{
 }
 
 public class Implementation {
-
-    Node addIntoTheList(int[]arr){
-        Node head=new Node(arr[0]);
-        Node temp=head;
+    public Node addIntoTheList(int[]arr ) {
+        Node head = new Node(arr[0]);
+        Node temp = head;
         for(int i=1;i<arr.length;i++){
             Node newNode=new Node(arr[i],null,temp);
             temp.next=newNode;
             temp=newNode;
         }
+
         return head;
     }
+
+
     static void display(Node head){
         Node temp=head;
         while(temp.next!=null){
