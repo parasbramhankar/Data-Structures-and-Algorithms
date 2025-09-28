@@ -25,8 +25,6 @@ public class Implementation {
         }
         return head;
     }
-
-
     static void display(Node head){
         Node temp=head;
         while(temp.next!=null){
