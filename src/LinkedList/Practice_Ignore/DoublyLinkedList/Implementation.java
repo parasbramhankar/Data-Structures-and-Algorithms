@@ -13,7 +13,6 @@ class Node{
         this.data=data;
     }
 }
-
 public class Implementation {
     public Node addIntoTheList(int[]arr ) {
         Node head = new Node(arr[0]);
