@@ -1,4 +1,4 @@
-package LinkedList.Practice.SingleLinkedList;
+package LinkedList.Practice_Ignore.SingleLinkedList;
 
 public class ImplementationOneByOne {
 
