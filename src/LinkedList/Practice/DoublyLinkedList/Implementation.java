@@ -23,7 +23,6 @@ public class Implementation {
             temp.next=newNode;
             temp=newNode;
         }
-
         return head;
     }
 
