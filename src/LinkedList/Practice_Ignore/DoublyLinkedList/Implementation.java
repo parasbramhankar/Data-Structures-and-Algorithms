@@ -1,4 +1,4 @@
-package LinkedList.Practice.DoublyLinkedList;
+package LinkedList.Practice_Ignore.DoublyLinkedList;
 
 class Node{
     int data;
