@@ -28,8 +28,9 @@ public class Queue {
         arr[rear]=x;
     }
     boolean isEmpty(){
-        return (front==-1 && rear==-1);
+        return (front == -1 || front > rear);
     }
+
     boolean isFull(){
         return (rear==capacity-1);
     }
