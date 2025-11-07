@@ -75,6 +75,13 @@ public class Queue {
         System.out.println("Dequeue: "+queue.deQueue());
         System.out.println("Dequeue: "+queue.deQueue());
 
+        //peek operation
+        System.out.println("Front Element: "+queue.peek());
 
+        //isEmpty
+        System.out.println("Is Empty: "+queue.isEmpty());
+
+        //isFull
+        System.out.println("Is Full"+queue.isFull());
     }
 }
