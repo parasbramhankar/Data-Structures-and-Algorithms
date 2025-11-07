@@ -51,7 +51,6 @@ public class Queue {
         return ele;
     }
 
-
     int peek(){
         return arr[front];
     }
