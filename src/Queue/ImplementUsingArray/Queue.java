@@ -37,12 +37,19 @@ public class Queue {
     int deQueue(){
         if(isEmpty()){
             System.out.println("Deletion not possible");
+            return -1;  // Return special value to indicate failure.
         }
-        int ele=arr[front];
-        arr[front]=0;
+        int ele = arr[front];
+        arr[front] = 0;
         front++;
+        // Reset front and rear if queue is empty after dequeue
+        if(front > rear){
+            front = -1;
+            rear = -1;
+        }
         return ele;
     }
+
 
     int peek(){
         return arr[front];
