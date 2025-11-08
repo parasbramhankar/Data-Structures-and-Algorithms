@@ -52,6 +52,11 @@ public class Queue {
     }
 
     int peek(){
+
+        if(isEmpty()){
+            System.out.println("Queue is empty");
+            return -1;
+        }
         return arr[front];
     }
 
