@@ -1,0 +1,38 @@
+
+- The queue is a First-In-First-Out (FIFO) data structure where elements are added at the rear and removed from the front.
+
+- The queue is represented using a singly linked list consisting of nodes.
+
+- Each node contains two fields:
+  - data (to store the value)
+  - next (reference to the next node in the queue).
+
+- Two pointers are used to represent the queue:
+  - front (points to the first element in the queue)
+  - rare (rear) (points to the last element in the queue).
+
+- To **push/enqueue** an element:
+  - Create a new node with the given data.
+  - If the queue is empty (both front and rare are null), set front and rare to point to this new node.
+  - Otherwise, update the current rear’s next pointer to the new node and then update rare to point to the new node.
+
+- To **pop/dequeue** an element:
+  - Check if the queue is empty (front and rare are null).
+  - If empty, print a message and return an indication value (-1 here).
+  - Otherwise, save the data from the front node.
+  - Update front to front.next (move to the next node).
+  - Return the saved data.
+
+- **isEmpty** returns true if both front and rare are null, indicating no elements.
+
+- **peek** returns the data from the front node without removing it, or returns -1 if empty.
+
+- **display** traverses from front to rare printing all node values, showing queue contents.
+
+- This linked list approach allows dynamic memory allocation, so the queue size can grow or shrink as needed.
+
+- All key operations (push, pop, peek) operate in constant time $$O(1)$$ because only the front and rare pointers and adjacent nodes are updated.
+
+- This structure correctly preserves the FIFO principle of queues by adding at rear and removing from front.
+
+In summary, your implementation aligns perfectly with the fundamental logic of queue using a linked list and is efficient and correct.[2][3][5][8]
