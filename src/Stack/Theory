@@ -22,7 +22,7 @@ Example: Think of it like a stack of plates: you can only add or remove the top 
 | isEmpty   | Check if stack is empty    | Check if there are any books left |
 | isFull    | Check if stack is full     |
 |           |(only applies to fixed size)| Check if shelf space is full |
-
+-------------------------------------------------------------------------------
 Step-by-step Example for Operations:
 ------------------------------------
 Initial stack: []
@@ -33,6 +33,7 @@ Pop: removes 20, stack: [10]
 IsEmpty: false
 IsFull (if max size = 2): true
 ------------------------------------
+
 
 Internal Implementation in Java
 --------------------------------
