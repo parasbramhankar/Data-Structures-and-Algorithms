@@ -61,5 +61,4 @@ getMin(): Returns the top element of the minStack.
 This approach guarantees constant time performance for all required operations by using auxiliary space to track the minimum at each step.
 
 
-
 For a more space-optimized approach using a single stack and mathematical encoding.
