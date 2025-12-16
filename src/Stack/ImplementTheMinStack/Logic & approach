@@ -1,0 +1,63 @@
+A Min Stack is a specialized stack data structure in Java that supports standard operations (push, pop, top) as well as an additional getMin operation, all in constant time (O(1)).
+The most common and clean approach to implement a Min Stack in Java is by using two java.util.Stack objects: one to store all elements (mainStack) and an auxiliary one to keep track of the minimum elements (minStack).
+
+
+
+Java Implementation (Two Stacks Approach)
+//***
+import java.util.Stack;
+
+class MinStack {
+    private Stack<Integer> mainStack;
+    private Stack<Integer> minStack;
+
+    /** Initialize your data structure here. */
+    public MinStack() {
+        mainStack = new Stack<>();
+        minStack = new Stack<>();
+    }
+
+    public void push(int val) {
+        mainStack.push(val);
+        if (minStack.isEmpty() || val <= minStack.peek()) {
+            minStack.push(val);
+        } else {
+            // If the new value is not the new minimum, push the current minimum again
+            minStack.push(minStack.peek());
+        }
+    }
+
+    public void pop() {
+        // Pop from both stacks to maintain synchronization
+        if (!mainStack.isEmpty()) {
+            mainStack.pop();
+            minStack.pop();
+        }
+    }
+
+    public int top() {
+        return mainStack.peek();
+    }
+
+    public int getMin() {
+        return minStack.peek();
+    }
+}
+**///
+Time Complexity: O(1) for all operations (push, pop, top, getMin).
+Space Complexity: O(n), where 'n' is the number of elements in the stack, as both stacks can store up to 'n' elements.
+
+Key Operations Explained
+push(int val): The value is always added to the mainStack.
+It is added to the minStack only if it is less than or equal to the current minimum.
+This ensures the top of minStack always holds the minimum of the mainStack up to that point.
+
+pop(): The top element is removed from both stacks simultaneously to keep them aligned.
+After popping, the top of the minStack automatically becomes the next minimum for the remaining elements.
+
+top(): Returns the top element of the mainStack.
+
+getMin(): Returns the top element of the minStack.
+
+This approach guarantees constant time performance for all required operations by using auxiliary space to track the minimum at each step.
+For a more space-optimized approach using a single stack and mathematical encoding, refer to resources like
