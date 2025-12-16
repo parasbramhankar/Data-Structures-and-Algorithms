@@ -98,5 +98,4 @@ public class MinStack {
 
         scanner.close();
     }
-
 }
