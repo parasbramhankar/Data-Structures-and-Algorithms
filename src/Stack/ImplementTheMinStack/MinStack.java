@@ -38,7 +38,6 @@ public class MinStack {
             System.out.println("Stack is empty");
             return -1;
         }
-
         return stack.peek();
     }
 
