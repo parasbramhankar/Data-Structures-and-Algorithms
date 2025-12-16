@@ -2,7 +2,6 @@ A Min Stack is a specialized stack data structure in Java that supports standard
 The most common and clean approach to implement a Min Stack in Java is by using two java.util.Stack objects: one to store all elements (mainStack) and an auxiliary one to keep track of the minimum elements (minStack).
 
 
-
 Java Implementation (Two Stacks Approach)
 //***
 import java.util.Stack;
