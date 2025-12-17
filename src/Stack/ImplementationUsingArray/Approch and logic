@@ -1,11 +1,16 @@
 Implementing a stack using an array involves using a fixed-size array to store elements and a variable (commonly called top) to track the index of the most recently added element, following the Last-In, First-Out (LIFO) principle.
+
 Core Components
+
 Array: The underlying data structure to store the elements. It has a predefined, fixed size.
+
 top variable: An integer variable that acts as an index pointer to the top element of the stack.
+
 Initially, top is set to -1 to indicate an empty stack.
+
 When an element is added, top is incremented.
 When an element is removed, top is decremented.
----------------------------------
+--------------------------------------------------------------------------------
 Key Operations
 The primary operations for an array-based stack are push, pop, peek, isEmpty, and isFull.
 
