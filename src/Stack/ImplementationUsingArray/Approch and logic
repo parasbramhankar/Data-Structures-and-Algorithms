@@ -19,11 +19,13 @@ Place the new element at the new top position in the array (stack[top] = value).
 ------------------------------------------------------------------------
 2. Pop Operation (Removing an element)
 This operation removes and returns the top element from the stack.
+
 Algorithm:
 Check if the stack is empty (isEmpty()). If it is, an underflow condition occurs.
 If not empty, retrieve the element at the top index (item = stack[top]).
 Decrement the top index (top--).
 Return the retrieved element.
+-------------------------------------------
 3. Peek/Top Operation (Viewing the top element)
 This operation returns the top element without removing it.
 Algorithm:
