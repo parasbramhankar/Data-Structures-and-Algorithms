@@ -1,1 +1,37 @@
+Implementing a stack using an array involves using a fixed-size array to store elements and a variable (commonly called top) to track the index of the most recently added element, following the Last-In, First-Out (LIFO) principle.
+Core Components
+Array: The underlying data structure to store the elements. It has a predefined, fixed size.
+top variable: An integer variable that acts as an index pointer to the top element of the stack.
+Initially, top is set to -1 to indicate an empty stack.
+When an element is added, top is incremented.
+When an element is removed, top is decremented.
+---------------------------------
+Key Operations
+The primary operations for an array-based stack are push, pop, peek, isEmpty, and isFull.
 
+1. Push Operation (Inserting an element)
+This operation adds a new element to the top of the stack.
+
+Algorithm:
+Check if the stack is full (isFull()). If it is, an overflow condition occurs.
+If not full, increment the top index (top++).
+Place the new element at the new top position in the array (stack[top] = value).
+------------------------------------------------------------------------
+2. Pop Operation (Removing an element)
+This operation removes and returns the top element from the stack.
+Algorithm:
+Check if the stack is empty (isEmpty()). If it is, an underflow condition occurs.
+If not empty, retrieve the element at the top index (item = stack[top]).
+Decrement the top index (top--).
+Return the retrieved element.
+3. Peek/Top Operation (Viewing the top element)
+This operation returns the top element without removing it.
+Algorithm:
+Check if the stack is empty (isEmpty()).
+If not empty, return the element at the top index (return stack[top]).
+4. isEmpty() Operation
+Checks if the stack is empty.
+Condition: The stack is empty if top == -1.
+5. isFull() Operation
+Checks if the stack has reached its maximum capacity (only applicable for fixed-size array implementations).
+Condition: The stack is full if top == MAX_SIZE - 1 (where MAX_SIZE is the predefined capacity of the array).
