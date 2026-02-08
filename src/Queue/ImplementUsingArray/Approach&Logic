@@ -1,0 +1,83 @@
+Implementation of Queue:
+
+
+Implementing a queue using an array involves using a fixed-size array to store elements and two variables
+(commonly called front and rear) to track the positions of elements, following the First-In, First-Out (FIFO)
+principle.
+
+Core Components
+
+Array: The underlying data structure used to store the elements. It has a predefined, fixed size.
+
+front variable: Points to the index of the element at the front of the queue (the element to be removed next).
+
+rear variable: Points to the index where the next element will be inserted.
+
+Initially:
+front = -1
+rear = -1
+
+When the first element is added, both front and rear become 0.
+
+When an element is inserted, rear is incremented.
+When an element is removed, front is incremented.
+
+---
+
+Key Operations
+
+The primary operations for an array-based queue are enqueue, dequeue, peek, isEmpty, and isFull.
+
+---
+
+1. Enqueue Operation (Inserting an element)
+
+This operation adds a new element at the rear of the queue.
+
+Algorithm:
+Check if the queue is full (isFull()). If it is, an overflow condition occurs.
+If the queue is empty, set front = 0.
+Increment the rear index (rear++).
+Place the new element at the rear position in the array (queue[rear] = value).
+
+---
+
+2. Dequeue Operation (Removing an element)
+
+This operation removes and returns the front element from the queue.
+
+Algorithm:
+Check if the queue is empty (isEmpty()). If it is, an underflow condition occurs.
+Retrieve the element at the front index (item = queue[front]).
+If front == rear, set both front and rear to -1 (queue becomes empty).
+Otherwise, increment the front index (front++).
+Return the retrieved element.
+
+---
+
+3. Peek/Front Operation (Viewing the front element)
+
+This operation returns the front element without removing it.
+
+Algorithm:
+Check if the queue is empty (isEmpty()).
+If not empty, return the element at the front index (return queue[front]).
+
+---
+
+4. isEmpty() Operation
+
+Checks if the queue is empty.
+
+Condition:
+The queue is empty if front == -1.
+
+---
+
+5. isFull() Operation
+
+Checks if the queue has reached its maximum capacity (only applicable for fixed-size array implementations).
+
+Condition:
+The queue is full if rear == MAX_SIZE - 1 (where MAX_SIZE is the predefined capacity of the array).
+

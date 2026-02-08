@@ -16,6 +16,27 @@ public class Queue {
         rear=-1;
     }
 
+    /*
+    In a normal (linear) array queue, once rear reaches the end,
+    you cannot insert — even if there is empty space at the beginning.
+    Solution:
+
+    void enqueue(int ele) {
+        // full condition
+        if ((rear + 1) % capacity == front) {
+            System.out.println("Queue is full");
+            return;
+        }
+
+        // first element
+        if (front == -1) {
+            front = 0;
+        }
+
+        rear = (rear + 1) % capacity;
+        arr[r
+     */
+
     void enQueue(int x){
         if(isFull()){
             System.out.println("Queue is already full");
